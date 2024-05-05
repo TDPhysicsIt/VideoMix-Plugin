@@ -11484,7 +11484,7 @@ $.fn.videoMix = function(options) {
 
 	  // Stopping the recorder will eventually trigger the `dataavailable` event and we can complete the recording process
 	  vidrecorder2.stop();
-      clearInterval(recordTimer);
+      clearTimeout(recordTimer);
 	}
 
 	function vidonRecordingReady(e) {
