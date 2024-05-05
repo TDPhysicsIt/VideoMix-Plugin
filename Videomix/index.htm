@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<head>
+<title>VideoMix-Plugin</title>
+<meta charset="utf-8">
+<meta name="author" content="Thomas Dittmar">
+
+<link rel="icon" href="Symbole/plist2.png">
+<link rel="stylesheet" href="css/plugins.css" type="text/css">
+
+<script src="js/jq2.js"></script>
+<script src="js/filesaver.js"></script>
+<script src="js/videomix.js"></script>
+<style>
+#vidplat {
+  width: 1900px;
+  height: 1070px;
+  background: #151515;
+  border: 6px outset navy;
+}
+  </style>
+</head>
+<body style='background:212121; font-family:arial; color:white;'>
+<div id="vidplat">
+  </div>
+
+
+<script>
+$(document).ready(function() {
+function setScreen() {
+	var scrW = window.screen.availWidth;
+
+	if (scrW < 1600) {
+	   $("#vidplat").css({"width":"1350px", "height":"760px"});
+		}
+	}
+
+	setScreen();
+  
+  var vidoptions = {
+      "path": "file:///C:/Users/sonvt/Videos/",
+      "tracks": ["Morgen fällt die Schule aus - Der Scherz der Woche", "Betragen ungenügend - Rache für Taft!", "Formel 1 Saison 1992 09 Großbritannien", "Formel 1 Saison 1993 11 Ungarn"],
+      "extension": ".mp4",
+      "pitch": false,
+      "pitchrate1": 1,
+      "pitchrate2": 1,
+      "pitchrate3": 1,
+      "pitchrate4": 1,
+      "volume1": 1,
+      "volume2": 1,
+      "volume3": 1,
+      "volume4": 1,
+      "controls": false,
+      "autoplay": false,
+      "loop": false,
+      "muted": false,
+      "pitchlimit": 2.5,
+      "skiptime": 10,
+      "pitchTime": 120,
+      "crossfadeMode": "manuel",
+      "trackChange": true,
+      "tracklistBackground": "#363636",
+      "fxboxBackground": "#212121",
+
+      "fxSounds": [
+        {
+          "name": "vbge1.ogg",
+          "label": "vbge1"
+        },
+        
+        {
+          "name": "vbge2.ogg",
+          "label": "vbge2"
+        },
+        
+        {
+          "name": "vbge3.ogg",
+          "label": "vbge3"
+        },
+        
+        {
+          "name": "vbge4.ogg",
+          "label": "vbge4"
+        },
+        
+        {
+          "name": "vbge5.ogg",
+          "label": "vbge5"
+        },
+        
+        {
+          "name": "vbge6.ogg",
+          "label": "vbge6"
+        },
+        
+        {
+          "name": "vbge7.ogg",
+          "label": "vbge7"
+        },
+        
+        {
+          "name": "vbge8.ogg",
+          "label": "vbge8"
+        },
+        
+        {
+          "name": "vbge9.ogg",
+          "label": "vbge9"
+        },
+        
+        {
+          "name": "vbge10.ogg",
+          "label": "vbge10"
+        },
+
+        {
+          "name": "vbge11.ogg",
+          "label": "vbge11"
+        }
+      ],
+
+      "fxPath": "file:///C:/Users/sonvt/Music/"
+  };
+  
+  $("#vidplat").videoMix(vidoptions);
+});
+</script>
+</body>
+</html>
